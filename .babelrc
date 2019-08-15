@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-1"
+  ],
+  "plugins": ["transform-runtime"],
+  "comments": false,
+  "env": {
+    "development": {
+      "presets": ["env", "react", "stage-1"],
+      "plugins": []
+    }
+  },
+  "ignore": [
+    "dist/*.js"
+  ]
+}

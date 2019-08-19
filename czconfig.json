@@ -1,10 +1,10 @@
 [
-    {
-        "name": "配置",
-        "value": "config"
-    },
-    {
-        "name": "组件",
-        "value": "components"
-    }
+  {
+    "name": "scope选项配置1",
+    "value": "config"
+  },
+  {
+    "name": "scope选项配置2",
+    "value": "components"
+  }
 ]

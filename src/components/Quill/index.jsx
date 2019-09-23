@@ -1,6 +1,7 @@
 /**
  * 基于Quill 的移动端富文本编辑器
  * github地址：https://github.com/quilljs/quill
+ * ?图片上传是base64上传，不支持url
  * @export
  * @class MobileQuill
  * @extends {Component}
@@ -13,6 +14,10 @@ import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 // 自定义样式
 import './index.scss';
+// 自定义分割线
+import './divider/index';
+let icons = Quill.import('ui/icons');
+icons['divider'] = '<p>hr</p>';
 
 export default class MobileQuill extends Component {
   static propTypes = {
@@ -21,7 +26,7 @@ export default class MobileQuill extends Component {
     bounds: PropTypes.node,
     debug: PropTypes.string,
     formats: PropTypes.object, // 支持的格式化https://bingkui.gitbooks.io/quill/content/documentation/formats.html
-    toolbar: PropTypes.object || PropTypes.array,
+    toolbar: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     keyboard: PropTypes.object,
     history: PropTypes.object,
     clipboard: PropTypes.object,

@@ -6,6 +6,7 @@
 *.js
 *.jpg
 *.woff
+*.jsx
 
 # 测试和打包目录
 test

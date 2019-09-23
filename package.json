@@ -1,93 +1,100 @@
 {
-    "name": "project-name",
-    "version": "1.0.0",
-    "description": "project description",
-    "scripts": {
-        "start": "webpack-dev-server --progress --color --config config/webpack.config.dev.js",
-        "build": "webpack --config config/webpack.config.prod.js",
-        "analyze": "NODE_ANALYZE=analyze webpack --config config/webpack.config.prod.js",
-        "fix:src": "eslint --fix --ext .jsx --ext .js src",
-        "fix:test": "eslint --fix  --ext .jsx --ext .js test"
-    },
-    "author": "author",
-    "license": "ISC",
-    "dependencies": {
-        "quill": "^1.3.6",
-        "react": "^16.3.1",
-        "react-dom": "^16.3.1",
-        "react-router-dom": "^4.2.2"
-    },
-    "devDependencies": {
-        "@beisen/eslint-config-beisenux": "^1.0.3",
-        "@commitlint/cli": "^8.1.0",
-        "@commitlint/config-conventional": "^8.1.0",
-        "@talentui/cz-project-changelog": "^1.0.1",
-        "babel-core": "^6.26.0",
-        "babel-eslint": "^8.2.6",
-        "babel-loader": "^7.1.4",
-        "babel-plugin-import": "^1.8.0",
-        "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
-        "babel-preset-stage-1": "^6.24.1",
-        "clean-webpack-plugin": "^0.1.19",
-        "commitizen": "^4.0.3",
-        "css-loader": "^0.28.11",
-        "eslint": "^4.19.1",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-config-prettier": "^6.0.0",
-        "eslint-loader": "^2.0.0",
-        "eslint-plugin-import": "^2.10.0",
-        "eslint-plugin-jsx-a11y": "^6.1.0",
-        "eslint-plugin-prettier": "^3.1.0",
-        "eslint-plugin-react": "^7.14.3",
-        "eslint-plugin-react-hooks": "^1.7.0",
-        "extract-text-webpack-plugin": "^3.0.2",
-        "file-loader": "^1.1.11",
-        "friendly-errors-webpack-plugin": "^1.7.0",
-        "happypack": "^5.0.0",
-        "html-webpack-plugin": "^3.2.0",
-        "husky": "^3.0.4",
-        "less": "^3.0.1",
-        "less-loader": "^4.1.0",
-        "lint-staged": "^9.2.3",
-        "node-sass": "^4.8.3",
-        "postcss-import": "^11.1.0",
-        "postcss-loader": "^2.1.3",
-        "postcss-preset-env": "^5.2.1",
-        "prettier": "^1.18.2",
-        "sass-loader": "^6.0.7",
-        "speed-measure-webpack-plugin": "^1.2.3",
-        "style-loader": "^0.20.3",
-        "stylelint": "^10.1.0",
-        "stylelint-config-standard": "^18.3.0",
-        "url-loader": "^1.0.1",
-        "webpack": "^3.11.0",
-        "webpack-bundle-analyzer": "^2.11.1",
-        "webpack-cli": "^2.0.14",
-        "webpack-dev-server": "^2.11.2",
-        "webpack-merge": "^4.1.2",
-        "webpack-parallel-uglify-plugin": "^1.1.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/@talentui/cz-project-changelog"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -e $GIT_PARAMS",
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "**/*.{ts,tsx,js,jsx}": [
-            "eslint --fix",
-            "git add"
-        ],
-        "**/*.{css,scss,less}": [
-            "stylelint --fix",
-            "git add"
-        ]
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "project description",
+  "scripts": {
+    "start": "webpack-dev-server --progress --color --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.prod.js",
+    "analyze": "NODE_ANALYZE=analyze webpack --config config/webpack.config.prod.js",
+    "fix:src": "eslint --fix --ext .jsx --ext .js src",
+    "fix:test": "eslint --fix  --ext .jsx --ext .js test"
+  },
+  "author": "author",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "draft-js": "^0.11.0",
+    "draft-js-alignment-plugin": "^2.0.6",
+    "draft-js-color-picker-plugin": "^1.2.0",
+    "draft-js-divider-plugin": "^0.2.1",
+    "draft-js-focus-plugin": "^3.0.1",
+    "draft-js-plugins-editor": "^3.0.0",
+    "quill": "^1.3.6",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "@beisen/eslint-config-beisenux": "^1.0.3",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@talentui/cz-project-changelog": "^1.0.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "commitizen": "^4.0.3",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "happypack": "^5.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.4",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^9.2.3",
+    "node-sass": "^4.8.3",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.3",
+    "postcss-preset-env": "^5.2.1",
+    "prettier": "^1.18.2",
+    "sass-loader": "^6.0.7",
+    "speed-measure-webpack-plugin": "^1.2.3",
+    "style-loader": "^0.20.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/@talentui/cz-project-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{css,scss,less}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
 }

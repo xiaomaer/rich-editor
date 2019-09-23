@@ -1,0 +1,9 @@
+.font-item {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  border: 2px solid #fff;
+  &-active {
+    border-color: aqua;
+  }
+}
